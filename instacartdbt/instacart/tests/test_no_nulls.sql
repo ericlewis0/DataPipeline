@@ -1,0 +1,1 @@
+{{ no_nulls_in_colums(ref('dim_users')) }}

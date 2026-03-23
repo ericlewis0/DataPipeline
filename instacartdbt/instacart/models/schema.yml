@@ -1,0 +1,62 @@
+version: 2
+
+models:
+    - name: dim_products
+      description: Product dimensions
+      columns: 
+        - name: product_id
+          tests:
+            - unique
+            - not_null
+        - name: product_name
+          tests:
+            - not_null
+        - name: aisle_id
+          tests:
+            - relationships:
+                to: ref('dim_aisles')
+                field: aisle_id
+        - name: department_id
+          tests:
+            - relationships:
+                to: ref('dim_departments')
+                field: department_id 
+
+    - name: dim_aisles
+      description: Aisle dimensions
+      columns: 
+        - name: aisle_id
+          tests:
+            - unique
+            - not_null
+
+    - name: dim_departments
+      description: Department dimensions
+      columns: 
+        - name: department_id
+          tests:
+            - unique
+            - not_null
+
+    - name: fct_orders
+      description: Order-level fact table
+      columns: 
+        - name: order_id
+          tests:
+            - unique
+            - not_null
+    
+    - name: fct_order_items
+      description: Product_level order table
+      columns: 
+        - name: order_id
+          tests:
+            - relationships: 
+                to: ref('fct_orders')
+                field: order_id
+
+        - name: product_id
+          tests:
+            - relationships:
+                to: ref('dim_products')
+                field: product_id 

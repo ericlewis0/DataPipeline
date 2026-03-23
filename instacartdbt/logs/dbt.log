@@ -1,0 +1,49 @@
+[0m15:30:10.374417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d0c260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c98b2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c98aff0>]}
+
+
+============================== 15:30:10.381539 | a502bfd9-1c34-4da5-95ad-d4ed7f00276c ==============================
+[0m15:30:10.381539 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:30:10.382420 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'no_print': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'introspect': 'True', 'invocation_command': 'dbt init instacart', 'write_json': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/ericlewis/.dbt', 'log_format': 'default', 'target_path': 'None', 'log_cache_events': 'False', 'use_colors': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'debug': 'False', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'printer_width': '80'}
+[0m15:30:10.396289 [debug] [MainThread]: Starter project path: /Users/ericlewis/Desktop/PersonalProjects/DataPipeline/instacartdbt/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m15:30:10.403127 [info ] [MainThread]: 
+Your new dbt project "instacart" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:30:10.403637 [info ] [MainThread]: Setting up your profile.
+[0m15:30:13.226089 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m15:30:13.226660 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m15:30:13.227044 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m15:31:18.766573 [info ] [MainThread]: Profile instacart written to /Users/ericlewis/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:31:18.775560 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 68.500175, "process_in_blocks": "0", "process_kernel_time": 0.382131, "process_mem_max_rss": "121622528", "process_out_blocks": "0", "process_user_time": 2.081535}
+[0m15:31:18.777399 [debug] [MainThread]: Command `dbt init` succeeded at 15:31:18.777126 after 68.50 seconds
+[0m15:31:18.778216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c98b2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7ad970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3d3680>]}
+[0m15:31:18.779115 [debug] [MainThread]: Flushing usage events
+[0m15:31:19.102200 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:36:16.078249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d713ce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddb38f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddb3530>]}
+
+
+============================== 15:36:16.086295 | b88a6ad0-5fdc-4a9a-a41b-fca193f1e4af ==============================
+[0m15:36:16.086295 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:36:16.087254 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'quiet': 'False', 'partial_parse': 'True', 'empty': 'False', 'profiles_dir': '/Users/ericlewis/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'target_path': 'None', 'warn_error': 'None', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'printer_width': '80', 'no_print': 'None', 'log_format': 'default', 'indirect_selection': 'eager', 'introspect': 'True'}
+[0m15:36:16.088089 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/ericlewis/Desktop/PersonalProjects/DataPipeline/instacartdbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:36:16.091797 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.11192754, "process_in_blocks": "0", "process_kernel_time": 0.465459, "process_mem_max_rss": "98406400", "process_out_blocks": "0", "process_user_time": 2.165427}
+[0m15:36:16.092501 [debug] [MainThread]: Command `dbt run` failed at 15:36:16.092349 after 0.11 seconds
+[0m15:36:16.093230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d75aae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddb3710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddb3500>]}
+[0m15:36:16.093810 [debug] [MainThread]: Flushing usage events
+[0m15:36:16.401150 [debug] [MainThread]: An error was encountered while trying to flush usage events
